@@ -1,0 +1,27 @@
+{
+  "name": "rust-sdk",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "bash .devcontainer/postCreate.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "vadimcn.vscode-lldb"
+      ],
+      "settings": {
+        "rust-analyzer.cargo.features": "all",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteEnv": {
+    "RUST_LOG": "info"
+  }
+}

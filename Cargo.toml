@@ -1,0 +1,23 @@
+[package]
+name = "copilot-sdk"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Rust SDK for interacting with the GitHub Copilot CLI"
+license = "MIT"
+repository = "https://github.com/evanallen13/rust-sdk"
+keywords = ["github", "copilot", "ai", "sdk"]
+categories = ["api-bindings", "asynchronous"]
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "process", "io-util", "sync", "time"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tracing = "0.1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+
+[[example]]
+name = "quick_start"
