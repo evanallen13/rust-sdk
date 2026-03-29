@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/rust:1-bullseye
 
 # Install Rust 1.85 (Edition 2024)
-RUN rustup toolchain install 1.85 --component rustfmt clippy \
+RUN rustup toolchain install 1.85 --component rustfmt --component clippy \
     && rustup default 1.85
 
 # Install Node.js (required for some Copilot CLI variants)
